@@ -1,6 +1,7 @@
 // src/components/Navbar/Navbar.jsx
 import React from "react";
-import "./Navbar.css"; // Import regular CSS
+import { Link } from "react-router-dom"; // Import Link
+import "./Navbar.css";
 
 function Navbar() {
   return (
@@ -10,10 +11,22 @@ function Navbar() {
         <span className="websiteName">CricPredict</span>
       </div>
       <ul className="navLinks">
-        <li>Home</li>
-        <li>Winnings</li>
-        <li>Fantasy Team</li>
-        <li>Scores</li>
+        <li>
+          <Link to="/">Home</Link>
+        </li>{" "}
+        {/* Link to Home */}
+        <li>
+          <Link to="/winnings">Winnings</Link>
+        </li>{" "}
+        {/* Link to Winnings */}
+        <li>
+          <Link to="/fantasy-team">Fantasy Team</Link>
+        </li>{" "}
+        {/* Link to Fantasy Team */}
+        <li>
+          <Link to="/scores">Scores</Link>
+        </li>{" "}
+        {/* Link to Scores */}
         <li>
           <input type="text" placeholder="Search" className="searchBar" />
         </li>
